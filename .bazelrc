@@ -5,6 +5,12 @@ build \
   --ios_simulator_version=13.3 \
   --verbose_failures \
 
+build --bes_results_url=https://app.buildbuddy.io/invocation/
+build --bes_backend=grpcs://cloud.buildbuddy.io
+build --remote_cache=grpcs://cloud.buildbuddy.io
+build --remote_timeout=3600
+build --remote_header=x-buildbuddy-api-key=s9a1UmPc6nszdtGLRQ6e
+
 # During development
 # build -s --test_output=all --cache_test_results=no
 
